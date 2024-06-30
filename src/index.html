@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.20.0/cytoscape.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.11/interact.min.js"></script>
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="w-full mx-auto my-4 rounded-xl flex justify-between space-x-2 box-border p-4"
+    >
+      <div>
+        <h1 class="text-2xl font-semibold text-justify my-4 text-green-500">
+          Algorithme de DantZing
+        </h1>
+        <div class="col-span-4 box-border p-4">
+          <button
+            class="w-full p-2 bg-green-500 text-white rounded-xl font-semibold"
+            id="save-data"
+          >
+            Enregistrer les données
+          </button>
+          <div class="my-4 flex flex-col space-y-4">
+            <div class="w-full flex flex-col">
+              <label for="start">Début</label>
+              <select
+                name="start"
+                id="start"
+                class="w-full border border-gray-400 rounded-xl p-2"
+              ></select>
+            </div>
+            <div class="w-full flex flex-col">
+              <label for="end">Fin</label>
+              <select
+                name="end"
+                id="end"
+                class="w-full border border-gray-400 rounded-xl p-2"
+              ></select>
+            </div>
+            <div class="flex justify-between space-x-2">
+              <button
+                class="p-2 bg-green-500 text-white rounded-xl font-semibold flex-grow"
+                id="minimisation"
+              >
+                Minimisation
+              </button>
+              <button
+                class="p-2 bg-green-500 text-white rounded-xl font-semibold flex-grow"
+                id="maximisation"
+              >
+                Maximisation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cy" class="flex-grow border h-[400px] border-gray-600"></div>
+    </div>
+    <div>
+      <!-- <div class="col-span-4 box-border p-4">
+        <button
+          class="w-full p-2 bg-green-500 text-white rounded-xl font-semibold"
+          id="save-data"
+        >
+          Enregistrer les données
+        </button>
+        <div class="my-4 flex flex-col space-y-4">
+          <div class="w-full flex flex-col">
+            <label for="start">Début</label>
+            <select
+              name="start"
+              id="start"
+              class="w-full border border-gray-400 rounded-xl p-2"
+            ></select>
+          </div>
+          <div class="w-full flex flex-col">
+            <label for="end">Fin</label>
+            <select
+              name="end"
+              id="end"
+              class="w-full border border-gray-400 rounded-xl p-2"
+            ></select>
+          </div>
+          <div class="flex justify-between space-x-2">
+            <button
+              class="p-2 bg-green-500 text-white rounded-xl font-semibold flex-grow"
+              id="minimisation"
+            >
+              Minimisation
+            </button>
+            <button
+              class="p-2 bg-green-500 text-white rounded-xl font-semibold flex-grow"
+              id="maximisation"
+            >
+              Maximisation
+            </button>
+          </div>
+        </div>
+      </div> -->
+      <div class="rounded-xl p-4 w-4/5 mx-auto" id="steps">
+        <div id="begin" class="text-3xl"></div>
+        <div id="steps-element-min"></div>
+        <div id="steps-element-max"></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
